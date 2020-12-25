@@ -12,20 +12,30 @@ import (
 // TODO(elianiva): change this to `os.Getenv("PORT")` when we deploy this
 var PORT = "3000"
 
-func main() {
-	mux := http.NewServeMux()
+type JSONResult map[string][]map[string]string
 
-	n5 := make(map[string][]map[string]string)
-	n5json, err := ioutil.ReadFile("./data/n5.json")
+func File2JSON(path string) JSONResult {
+	result := make(JSONResult)
+	jsonFile, err := ioutil.ReadFile(path)
 	if err != nil {
 		log.Fatal(err)
-		return
+		return nil
 	}
 
-	json.Unmarshal(n5json, &n5)
+	json.Unmarshal(jsonFile, &result)
+	return result
+}
 
-	mux.HandleFunc("/api/n5/all", func(w http.ResponseWriter, r *http.Request) {
-		jsonResp, err := json.Marshal(n5)
+func main() {
+	level := map[string]JSONResult{
+		"n5": File2JSON("./data/n5.json"),
+		"n4": File2JSON("./data/n5.json"),
+	}
+
+	http.HandleFunc("/api/all", func(w http.ResponseWriter, r *http.Request) {
+		u := r.URL.Query()
+
+		jsonResp, err := json.Marshal(level[u.Get("level")])
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -34,11 +44,12 @@ func main() {
 		fmt.Fprint(w, string(jsonResp))
 	})
 
-	mux.HandleFunc("/api/n5/rand", func(w http.ResponseWriter, r *http.Request) {
-		randIdx := rand.Intn(len(n5["data"]))
+	http.HandleFunc("/api/rand", func(w http.ResponseWriter, r *http.Request) {
+		u := r.URL.Query()
+		randIdx := rand.Intn(len(level[u.Get("level")]["data"]))
 
 		data := map[string]map[string]string{
-			"data": n5["data"][randIdx],
+			"data": level[u.Get("level")]["data"][randIdx],
 		}
 
 		jsonResp, err := json.Marshal(data)
@@ -50,6 +61,6 @@ func main() {
 		fmt.Fprint(w, string(jsonResp))
 	})
 
-	fmt.Println("Server running on " + PORT)
-	log.Fatal(http.ListenAndServe(":"+PORT, mux))
+	log.Println("Server started on port: " + PORT)
+	log.Fatal(http.ListenAndServe(":"+PORT, nil))
 }
