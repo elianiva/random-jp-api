@@ -32,6 +32,10 @@ func main() {
 		"n4": File2GoMap("./data/n5.json"),
 	}
 
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello 世界！")
+	})
+
 	http.HandleFunc("/api/all", func(w http.ResponseWriter, r *http.Request) {
 		u := r.URL.Query()
 
