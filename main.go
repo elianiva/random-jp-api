@@ -33,10 +33,12 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		fmt.Fprintf(w, "Hello 世界！")
 	})
 
 	http.HandleFunc("/api/all", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		u := r.URL.Query()
 
 		jsonResp, err := json.Marshal(level[u.Get("level")])
@@ -49,6 +51,8 @@ func main() {
 	})
 
 	http.HandleFunc("/api/rand", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+
 		u := r.URL.Query()
 		randIdx := rand.Intn(len(level[u.Get("level")]["data"]))
 
