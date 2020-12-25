@@ -1,6 +1,11 @@
 {
   "data": [
     {
+      "kanji": "ああ",
+      "kana": "ああ",
+      "en": "Ah!"
+    },
+    {
       "kanji": "会う",
       "kana": "あう",
       "en": "to meet"
@@ -34,6 +39,11 @@
       "kanji": "開ける",
       "kana": "あける",
       "en": "to open"
+    },
+    {
+      "kanji": "あげる",
+      "kana": "あげる",
+      "en": "to give"
     },
     {
       "kanji": "朝",
@@ -293,7 +303,7 @@
     {
       "kanji": "意味",
       "kana": "いみ",
-      "en": "meaning"
+      "en": "-------------------"
     },
     {
       "kanji": "妹",
@@ -309,6 +319,16 @@
       "kanji": "入口",
       "kana": "いりぐち",
       "en": "entrance"
+    },
+    {
+      "kanji": "いる",
+      "kana": "いる",
+      "en": "need, must have, be required"
+    },
+    {
+      "kanji": "いる",
+      "kana": "いる",
+      "en": "to exist"
     },
     {
       "kanji": "入れる",
@@ -434,6 +454,11 @@
       "kanji": "大きい",
       "kana": "おおきい",
       "en": "big"
+    },
+    {
+      "kanji": "おおぜい",
+      "kana": "おおぜい",
+      "en": "many people"
     },
     {
       "kanji": "お母さん",
@@ -571,6 +596,11 @@
       "en": "aunt"
     },
     {
+      "kanji": "おばあさん",
+      "kana": "おばあさん",
+      "en": "grandmother"
+    },
+    {
       "kanji": "お弁当",
       "kana": "おべんとう",
       "en": "lunchbox"
@@ -676,6 +706,11 @@
       "en": "face"
     },
     {
+      "kanji": "かかる",
+      "kana": "かかる",
+      "en": "to take time, money"
+    },
+    {
       "kanji": "鍵",
       "kana": "かぎ",
       "en": "key"
@@ -694,6 +729,16 @@
       "kanji": "〜か月",
       "kana": "〜かげつ",
       "en": "~ number of months"
+    },
+    {
+      "kanji": "かける",
+      "kana": "かける",
+      "en": "to wear"
+    },
+    {
+      "kanji": "かける",
+      "kana": "かける",
+      "en": "to make a phone call"
     },
     {
       "kanji": "傘",
@@ -851,6 +896,11 @@
       "en": "to borrow"
     },
     {
+      "kanji": "〜がります",
+      "kana": "〜がります",
+      "en": "3rd person wants to"
+    },
+    {
       "kanji": "軽い",
       "kana": "かるい",
       "en": "light (not heavy)"
@@ -991,6 +1041,11 @@
       "en": "to come"
     },
     {
+      "kanji": "きれい",
+      "kana": "きれい",
+      "en": "beautiful, clean"
+    },
+    {
       "kanji": "キロ",
       "kana": "キロ",
       "en": "kg"
@@ -1094,6 +1149,11 @@
       "kanji": "消す",
       "kana": "けす",
       "en": "to turn off, switch off"
+    },
+    {
+      "kanji": "けっこう",
+      "kana": "けっこう",
+      "en": "fine, all right"
     },
     {
       "kanji": "結婚",
@@ -1284,6 +1344,11 @@
       "kanji": "作文",
       "kana": "さくぶん",
       "en": "composition"
+    },
+    {
+      "kanji": "さす",
+      "kana": "さす",
+      "en": "to open an umbrella"
     },
     {
       "kanji": "冊",
@@ -1734,6 +1799,11 @@
       "kanji": "大切",
       "kana": "たいせつ",
       "en": "very important"
+    },
+    {
+      "kanji": "たいてい",
+      "kana": "たいてい",
+      "en": "mostly, usually"
     },
     {
       "kanji": "台所",
@@ -2264,6 +2334,11 @@
       "kanji": "並べる",
       "kana": "ならべる",
       "en": "to line up"
+    },
+    {
+      "kanji": "なる",
+      "kana": "なる",
+      "en": "to become"
     },
     {
       "kanji": "二",
@@ -3136,6 +3211,11 @@
       "en": "mountain"
     },
     {
+      "kanji": "やる",
+      "kana": "やる",
+      "en": "to do"
+    },
+    {
       "kanji": "八日",
       "kana": "ようか",
       "en": "8th day of the month, 8 days"
@@ -3226,6 +3306,11 @@
       "en": "travel"
     },
     {
+      "kanji": "れい",
+      "kana": "れい",
+      "en": "zero"
+    },
+    {
       "kanji": "冷蔵庫",
       "kana": "れいぞうこ",
       "en": "refrigerator"
@@ -3289,6 +3374,6 @@
       "kanji": "悪い",
       "kana": "わるい",
       "en": "bad"
-    }
+    },
   ]
 }
