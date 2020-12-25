@@ -7,10 +7,10 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
+	"os"
 )
 
-// TODO(elianiva): change this to `os.Getenv("PORT")` when we deploy this
-var PORT = "3000"
+var PORT = os.Getenv("PORT")
 
 type JSONResult map[string][]map[string]string
 
