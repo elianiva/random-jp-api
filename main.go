@@ -14,7 +14,7 @@ var PORT = os.Getenv("PORT")
 
 type JSONResult map[string][]map[string]string
 
-func File2JSON(path string) JSONResult {
+func File2GoMap(path string) JSONResult {
 	result := make(JSONResult)
 	jsonFile, err := ioutil.ReadFile(path)
 	if err != nil {
@@ -28,8 +28,8 @@ func File2JSON(path string) JSONResult {
 
 func main() {
 	level := map[string]JSONResult{
-		"n5": File2JSON("./data/n5.json"),
-		"n4": File2JSON("./data/n5.json"),
+		"n5": File2GoMap("./data/n5.json"),
+		"n4": File2GoMap("./data/n5.json"),
 	}
 
 	http.HandleFunc("/api/all", func(w http.ResponseWriter, r *http.Request) {
