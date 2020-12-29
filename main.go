@@ -33,11 +33,13 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		defer r.Body.Close()
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		fmt.Fprintf(w, "Hello 世界！")
 	})
 
 	http.HandleFunc("/api/all", func(w http.ResponseWriter, r *http.Request) {
+		defer r.Body.Close()
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		u := r.URL.Query()
 
@@ -51,6 +53,7 @@ func main() {
 	})
 
 	http.HandleFunc("/api/rand", func(w http.ResponseWriter, r *http.Request) {
+		defer r.Body.Close()
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 
 		u := r.URL.Query()
