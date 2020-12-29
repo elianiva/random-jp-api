@@ -8,6 +8,7 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"time"
 )
 
 var PORT = os.Getenv("PORT")
@@ -31,6 +32,8 @@ func main() {
 		"n5": File2GoMap("./data/n5.json"),
 		"n4": File2GoMap("./data/n5.json"),
 	}
+
+	rand.Seed(time.Now().UnixNano())
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		defer r.Body.Close()
