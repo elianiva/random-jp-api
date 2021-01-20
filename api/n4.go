@@ -1,3 +1,8 @@
+package handler
+
+import "net/http"
+
+const n4 = `
 {
   "data": [
     {
@@ -4931,4 +4936,9 @@
       "en": "arrangement"
     }
   ]
+}
+`
+
+func Dumb(w http.ResponseWriter, r *http.Request) {
+	return
 }

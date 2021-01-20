@@ -1,3 +1,8 @@
+package handler
+
+import "net/http"
+
+const n5 = `
 {
   "data": [
     {
@@ -1711,4 +1716,9 @@
       "en": "all"
     }
   ]
+}
+`
+
+func Dummy(w http.ResponseWriter, r *http.Request) {
+	return
 }
