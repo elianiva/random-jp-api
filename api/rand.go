@@ -6,9 +6,11 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
+	"time"
 )
 
 func Rand(w http.ResponseWriter, r *http.Request) {
+	rand.Seed(time.Now().UnixNano())
 	level := map[string]JSONResult{
 		"n5": File2GoMap(n5),
 		"n4": File2GoMap(n4),
